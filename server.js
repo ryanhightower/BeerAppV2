@@ -3,7 +3,7 @@ var server = express();
 
 // configure server (assets folder, middleware, etc.)
 require('./server/expressConfig')(server, express);
-
+require('./server/api/beer')(server);
 
 server.get('/', function(req, res){
   res.sendFile('index.html', {root: server.settings.views});
